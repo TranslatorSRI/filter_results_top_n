@@ -35,3 +35,9 @@ kubectl port-forward service/filter-results-top-n <PORT>:7092  # forward to port
 ```
 
 Access Swagger UI at `http://localhost:<PORT>/docs`.
+
+## testing
+
+```bash
+python -m pytest tests/ --cov app --cov-report term-missing
+```
