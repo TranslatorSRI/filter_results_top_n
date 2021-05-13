@@ -3,16 +3,16 @@
         "query_graph": {
             "nodes": {
                 "type-2 diabetes": {
-                    "id": "MONDO:0005148"
+                    "ids": ["MONDO:0005148"]
                 },
                 "drug": {
-                    "category": "biolink:ChemicalSubstance"
+                    "categories": ["biolink:ChemicalSubstance"]
                 }
             },
             "edges": {
                 "treats": {
                     "subject": "drug",
-                    "predicate": "biolink:treats",
+                    "predicates": ["biolink:treats"],
                     "object": "type-2 diabetes"
                 }
             }
@@ -24,11 +24,11 @@
                 },
                 "CHEBI:6801": {
                     "name": "metformin",
-                    "category": "biolink:ChemicalSubstance"
+                    "categories": ["biolink:ChemicalSubstance"]
                 },
                 "CHEBI:5441": {
                     "name": "glyburide",
-                    "category": "biolink:ChemicalSubstance"
+                    "categories":["biolink:ChemicalSubstance"]
                 }
             },
             "edges": {
