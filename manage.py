@@ -4,20 +4,20 @@ import os
 
 
 def print_green(s):
-    GREEN = '\033[92m'
-    ENDC = '\033[0m'
+    """Print text in green color"""
+    GREEN = "\033[92m"
+    ENDC = "\033[0m"
     print(f"{GREEN}{s}{ENDC}")
 
 
 def run_command(cmd):
+    """Echo and run a shell command"""
     print_green(cmd)
     os.system(cmd)
 
 
 def lock(extra_args):
-    """
-    Write requirements-lock.txt and requirements-test-lock.txt
-    """
+    """Write requirements-lock.txt and requirements-test-lock.txt"""
     requirements_files = {
         "requirements.txt": "requirements-lock.txt",
         "requirements-test.txt": "requirements-test-lock.txt",
@@ -32,11 +32,12 @@ def lock(extra_args):
 
 
 def main():
+    """Entrypoint for management script"""
     command = sys.argv[1]
     command_func = globals()[command]
     extra_args = " " + " ".join(sys.argv[2:])
     command_func(extra_args)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
