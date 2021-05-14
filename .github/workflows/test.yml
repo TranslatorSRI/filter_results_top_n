@@ -30,10 +30,6 @@ jobs:
 
       - name: Run pytest
         run: |
-          export CONFIG_PATH=./test/config
-          export DB_PATH=./test/example.db
-          export ICEES_API_LOG_PATH=./logs
-          mkdir ./logs
           python -m pytest --cov=app --cov-report=xml tests/
 
       - name: Upload coverage to Codecov
