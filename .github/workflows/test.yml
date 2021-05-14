@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          if [ -f requirements-test.txt ]; then pip install -r requirements-test.txt; fi
+          if [ -f requirements-lock.txt ]; then pip install -r requirements-lock.txt; fi
+          if [ -f requirements-test-lock.txt ]; then pip install -r requirements-test-lock.txt; fi
 
       - name: Run pytest
         run: |
