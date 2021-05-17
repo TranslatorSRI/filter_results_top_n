@@ -7,6 +7,6 @@ services:
     build:
       context: .
     environment:
-      DEPLOYMENT: '${PORT}'
+      USE_GUNICORN: 1
     ports:
       - '${PORT}:7092'
