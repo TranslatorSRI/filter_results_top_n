@@ -21,4 +21,8 @@ case $key in
 esac
 done
 
-uvicorn app.server:APP --host 0.0.0.0 --port $PORT
+if [[ -z $USE_GUNICORN ]]; then
+    uvicorn app.server:APP --reload --host 0.0.0.0 --port $PORT
+else
+    gunicorn app.server:APP -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT
+fi

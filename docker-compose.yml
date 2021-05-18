@@ -6,5 +6,7 @@ services:
     container_name: filter_results_top_n
     build:
       context: .
+    environment:
+      USE_GUNICORN: 1
     ports:
       - '${PORT}:7092'
