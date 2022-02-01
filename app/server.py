@@ -18,6 +18,7 @@ APP = TRAPI(
         "x-id": "patrickkwang",
         "x-role": "responsible developer",
     },
+    openapi_tags=[{"name": "filter_results_top_n"}],
 )
 
 
