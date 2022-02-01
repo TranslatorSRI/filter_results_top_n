@@ -18,5 +18,7 @@ USER nru
 ADD ./app ./app
 ADD ./main.sh ./main.sh
 
+EXPOSE 8080
+
 # set up entrypoint
 ENTRYPOINT ["bash", "main.sh"]
